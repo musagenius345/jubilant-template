@@ -5,6 +5,9 @@
   "main": "public/index.html",
   "author": "Musa Badru",
   "type":"module",
+  "pnpm": {
+    "node-linker": "hoist"
+  },
   "scripts": {
     "dev":"vite",
     "build":"vite build",
