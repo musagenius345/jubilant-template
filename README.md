@@ -10,7 +10,7 @@
 
 1. Select "Use this template" to copy this project into your own new repo.
 
-2. _Optional:_ Run a find/replace for `tdbc` to update to your preferred prefix (or adjust stylelint settings).
+2. _Optional:_ Run a find/replace for `spine` to update to your preferred prefix (or adjust stylelint settings).
 
 3. You can customize the `theme` Sass directly, or place overrides to variables at the top of the main `style.scss` file before the `theme` file is imported.
 
