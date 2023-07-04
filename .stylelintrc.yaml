@@ -2,6 +2,8 @@ extends:
   - /data/data/com.termux/files/home/.local/share/pnpm/global/5/.pnpm/stylelint-config-standard@33.0.0_stylelint@15.9.0/node_modules/stylelint-config-standard
 plugins:
   - /data/data/com.termux/files/home/.local/share/pnpm/global/5/.pnpm/stylelint-order@6.0.3_stylelint@15.9.0/node_modules/stylelint-order
+  - /data/data/com.termux/files/home/.local/share/pnpm/global/5/node_modules/stylelint-scss
+# customSyntax: css
 rules:
   # Wrap lines greater than 120 characters
   max-line-length: 120
@@ -208,6 +210,26 @@ rules:
     font-size:
       - "rem"
       - "em"
+      - "ch"
+      - "vw"
+    width:
+      - "rem"
+      - "cqi"
+      - "cqb"
+      - "cqw"
+      - "cqh"
+      - "ch"
+      - "dvw"
+      - "vw"
+    height:
+      - "rem"
+      - "cqi"
+      - "cqb"
+      - "cqw"
+      - "cqh"
+      - "ch"
+      - "dvh"
+      - "vh"
   # The following prefix rules are enabled since we use autoprefixer
   at-rule-no-vendor-prefix: true
   media-feature-name-no-vendor-prefix: true
@@ -223,6 +245,9 @@ rules:
   # attribute modifiers based on selector-max-compound-selectors, plus an addition for
   # pseudo-classes (4). Allow for pseudo-elements (1).
   selector-max-specificity: 0,4,1
+  color-no-hex: true
+  function-disallowed-list: ["rgb", "hwb", "rgba"]
+  color-function-notation: "modern"
   at-rule-no-unknown:
     - true
     - ignoreAtRules:
@@ -276,10 +301,10 @@ rules:
   function-url-no-scheme-relative: true
   # TODO: and FIXME: warnings are super useful because they remind us that we should address these
   # within our codebase
-  comment-word-disallowed-list:
-    - - /^TODO:/
-      - /^FIXME:/
-    - severity: warning
+  # comment-word-disallowed-list:
+  #   - - /^TODO:/
+  #     - /^FIXME:/
+  #   - severity: warning
   # Part of google's style guide
   number-leading-zero: always
   at-rule-empty-line-before:
@@ -307,14 +332,14 @@ rules:
   # We use Harry Roberts' BEM dialect as our preferred way to format classes.
   # See: http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/
   # See: https://github.com/postcss/postcss-bem-linter/blob/c59db3f/lib/preset-patterns.js#L39
-  plugin/selector-bem-pattern:
-    componentName: ^[a-z]+(?:-[a-z]+)*$
-    # <namespace>-<block>__<element>*--<modifier>*[<attribute>]*
-    componentSelectors: ^\.spine-{componentName}(?:__[a-z]+(?:-[a-z]+)*)*(?:--[a-z]+(?:-[a-z]+)*)*(?:\[.+\])*$
-    ignoreSelectors:
-      - ^fieldset
-      - ^\[aria\-disabled=(?:.+)\]
-      - ^img
+  # plugin/selector-bem-pattern:
+  #   componentName: ^[a-z]+(?:-[a-z]+)*$
+  #   # <namespace>-<block>__<element>*--<modifier>*[<attribute>]*
+  #   componentSelectors: ^\.spine-{componentName}(?:__[a-z]+(?:-[a-z]+)*)*(?:--[a-z]+(?:-[a-z]+)*)*(?:\[.+\])*$
+  #   ignoreSelectors:
+  #     - ^fieldset
+  #     - ^\[aria\-disabled=(?:.+)\]
+  #     - ^img
 
   # SCSS naming patterns, just like our CSS conventions above.
   # (note for $-vars we use a leading underscore for "private" variables)
