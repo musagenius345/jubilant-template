@@ -1,6 +1,4 @@
-.sass-cache
-.sass-cache/*
-*.scssc
+
 *.log
 .htaccess
 node_modules/

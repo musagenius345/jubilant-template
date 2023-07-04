@@ -1,1 +1,1 @@
-// placeholder
+console.log('Hello world')

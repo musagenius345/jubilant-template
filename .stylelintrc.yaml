@@ -1,8 +1,8 @@
 extends:
-  - /data/data/com.termux/files/home/.local/share/pnpm/global/5/.pnpm/stylelint-config-standard@33.0.0_stylelint@15.9.0/node_modules/stylelint-config-standard
+  - stylelint-config-standard
 plugins:
-  - /data/data/com.termux/files/home/.local/share/pnpm/global/5/.pnpm/stylelint-order@6.0.3_stylelint@15.9.0/node_modules/stylelint-order
-  - /data/data/com.termux/files/home/.local/share/pnpm/global/5/node_modules/stylelint-scss
+  - stylelint-order
+  - stylelint-scss
 # customSyntax: css
 rules:
   # Wrap lines greater than 120 characters

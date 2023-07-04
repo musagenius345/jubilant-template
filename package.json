@@ -4,19 +4,25 @@
   "version": "0.4.0",
   "main": "public/index.html",
   "author": "Musa Badru",
-  "type":"module",
+  "type": "module",
   "pnpm": {
     "node-linker": "hoist"
   },
   "scripts": {
-    "dev":"vite",
-    "build":"vite build",
-    "preview":"vite preview"
-  },
-  "dependencies": {
-    
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "browserslist": [
     "last 30 versions and not dead"
-  ]
+  ],
+  "devDependencies": {
+    "sass": "^1.63.6",
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "postcss-preset-env": "^9.0.0"
+  }
 }

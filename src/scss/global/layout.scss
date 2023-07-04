@@ -1,4 +1,4 @@
-
+@use "./colors" as *;
 
 
 .nav {
@@ -428,7 +428,7 @@
 }
 
 .page-footer__nav-link {
-  color: #606060;
+  color: var(--nav-links);
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s
@@ -480,7 +480,7 @@
 .widget_feed input[type=text] {
   height: 40px;
   background-color: #494949;
-  color: #606060
+  color: var(--nav-links)
 }
 
 .widget_feed input[type=submit] {
@@ -541,7 +541,7 @@
 }
 
 .widget__text {
-  color: #606060;
+  color: var(--nav-links);
   line-height: 16px
 }
 
@@ -549,7 +549,7 @@
   text-align: center;
   font-size: 15px;
   line-height: 22px;
-  color: #606060
+  color: var(--nav-links)
 }
 
 @media screen and (max-width:960px) {
@@ -718,4 +718,9 @@
     text-align: center;
     clear: both
   }
+}
+
+
+.copyright a{
+  color: oklch(70% 0.101 204.88);
 }
