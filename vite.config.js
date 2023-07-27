@@ -1,6 +1,5 @@
 // vite.config.js
 import { defineConfig } from 'vite';
-import path from 'path'; //why?
 
 export default defineConfig({
   plugins: [],
