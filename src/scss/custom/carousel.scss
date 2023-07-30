@@ -29,6 +29,16 @@ body {
   color: hsla(222, 86%, 35%, 1);
   bottom: 3rem;
   z-index: 10;
+  
+  h1,p{
+    background-color: hsla(235, 17%, 84%, 0.8);
+    padding-inline-start: 1rem; 
+    color: hsla(235, 0%, 0%, 1);
+  }
+  
+  p{
+    font-size: 1.2rem;
+  }
 }
 
 /* Declare heights because of positioning of img element */
